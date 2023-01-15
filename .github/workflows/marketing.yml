@@ -1,4 +1,4 @@
-name: Container Prod
+name: Marketing Prods
 
 env:
   VERSION: ${{ github.run_number }}
