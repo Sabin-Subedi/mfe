@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    working-directory: ${{env.SCOPE}}
+    working-directory: marketing
 
 env:
   AWS_REGION: "ap-south-1"
