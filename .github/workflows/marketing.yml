@@ -2,7 +2,7 @@ name: Container Prod
 
 env:
   VERSION: ${{ github.run_number }}
-  SCOPE: "container"
+  SCOPE: "marketing"
 
 on:
   push:
