@@ -27,7 +27,7 @@ jobs:
         run: yarn
 
       - name: Build the container
-        run: npm run build --if-present
+        run: yarn build
 
       - name: aws cli
         uses: chrislennon/action-aws-cli@v1.1
