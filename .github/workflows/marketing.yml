@@ -8,9 +8,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "${{env.SCOPE}}/**"
-      - ".github/workflows/${{env.SCOPE}}.yml"
+    # paths:
+    #   - "${{env.SCOPE}}/**"
+    #   - ".github/workflows/${{env.SCOPE}}.yml"
 
 defaults:
   run:
