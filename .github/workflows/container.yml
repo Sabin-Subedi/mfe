@@ -1,20 +1,20 @@
 name: Container Prod
 
-env:
-  VERSION: ${{ github.run_number }}
-  SCOPE: "container"
-
 on:
   push:
     branches:
       - main
     paths:
-      - "${{env.SCOPE}}/**"
-      - ".github/workflows/${{env.SCOPE}}.yml"
+      - "container/**"
+      - ".github/workflows/container.yml"
 
 defaults:
   run:
-    working-directory: ${{env.SCOPE}}
+    working-directory: container
+
+env:
+  VERSION: ${{ github.run_number }}
+  SCOPE: "container"
 
 jobs:
   build:
@@ -32,6 +32,8 @@ jobs:
 
       - name: Build the container
         run: yarn build
+        env:
+          PRODUCTION_DOMAIN: ${{secrets.PRODUCTION_DOMAIN}}
 
       - name: Configure AWS credentials for s3 deployment
         uses: aws-actions/configure-aws-credentials@v1

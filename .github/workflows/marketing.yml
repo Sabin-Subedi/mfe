@@ -13,8 +13,6 @@ defaults:
     working-directory: marketing
 
 env:
-  AWS_REGION: "ap-south-1"
-  VERSION: ${{ github.run_number }}
   SCOPE: "marketing"
 
 jobs:
