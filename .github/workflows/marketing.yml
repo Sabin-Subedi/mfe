@@ -1,16 +1,16 @@
 name: Marketing Prods
 
-env:
-  VERSION: ${{ github.run_number }}
-  SCOPE: "marketing"
-
 on:
   push:
     branches:
       - main
-    # paths:
-    #   - "${{env.SCOPE}}/**"
-    #   - ".github/workflows/${{env.SCOPE}}.yml"
+    paths:
+      - "marketing/**"
+      - ".github/workflows/marketing.yml"
+
+env:
+  VERSION: ${{ github.run_number }}
+  SCOPE: "marketing"
 
 defaults:
   run:
