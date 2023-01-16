@@ -1,10 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import { createMemoryHistory } from "history";
 
 const mount = (el) => {
+  const history = createMemoryHistory();
   const root = createRoot(el);
-  root.render(<App />);
+  root.render(<App history={history} />);
 };
 
 // Context/Situation #1
