@@ -9,12 +9,17 @@ const generateClassName = createGenerateClassName({
 });
 
 function App({ history }) {
+  console.log("history", history, Router);
   return (
     <StylesProvider generateClassName={generateClassName}>
       <Router history={history}>
         <Switch>
-          <Route path="/" component={<Album />} />
-          <Route path="pricing" component={<Pricing />} />
+          <Route exact path="/pricing">
+            <Pricing />
+          </Route>
+          <Route exact path="/">
+            <Album />
+          </Route>
         </Switch>
       </Router>
     </StylesProvider>

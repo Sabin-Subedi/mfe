@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <Header />
-        <MarketingApp />;
+        <MarketingApp />
       </StylesProvider>
     </BrowserRouter>
   );

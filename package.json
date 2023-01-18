@@ -1,0 +1,16 @@
+{
+
+  "name": "mfe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Sabin-Subedi/mfe.git",
+  "author": "Sabin Subedi <sabinsubedi125@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "install": "concurrently \"cd dashboard && yarn install\"  \"cd auth && yarn install\" \"cd container && yarn install\" \"cd marketing && yarn install\"",
+    "start":"concurrently \"cd dashboard && yarn start\"  \"cd auth && yarn start\" \"cd container && yarn start\" \"cd marketing && yarn start\" "
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
